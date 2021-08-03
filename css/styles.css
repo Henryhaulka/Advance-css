@@ -1,0 +1,27 @@
+/* basic browser reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  color: #777;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 10px;
+}
+
+.header {
+  /* vh-viewport height */
+  
+  background-image:linear-gradient(to right, rgba(27, 27, 26, 0.5),rgba(37, 231, 157, 0.795)), url("https://media.istockphoto.com/photos/engineer-showing-female-teenage-apprentice-how-to-use-lathe-picture-id876961820?k=6&m=876961820&s=612x612&w=0&h=mIOOyGQIsGapcfh3YtXFIPY-MkLFnrqZ879qHhs8zjA=");
+  background-size: cover;
+  height: 95vh;
+  background-position: top;
+  /* coordinate (x y, x y,x y,x y) */
+  clip-path: polygon(0 0,100% 0, 100% 75vh,0 100%);
+}
