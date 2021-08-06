@@ -30,4 +30,40 @@ body {
 
   /* coordinate (x y, x y,x y,x y) */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.header .logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.header .logo {
+  height: 35px;
+  background-color: transparent;
+  border-radius: 20%;
+}
+
+.text-box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.text-box .tourex-1 {
+  display: block;
+  font-size: 70px;
+  letter-spacing: 38px;
+  font-weight: 700;
+}
+
+.text-box .tourex-2 {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 7px;
 }
