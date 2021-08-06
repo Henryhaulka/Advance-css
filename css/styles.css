@@ -19,9 +19,9 @@ body {
   /* vh-viewport height */
   background-image:
     linear-gradient(
-    to right,
-    rgba(27, 27, 26, 0.5),
-    rgba(37, 231, 157, 0.795)
+      to right,
+      rgba(27, 27, 26, 0.5),
+      rgba(37, 231, 157, 0.795)
     ),
     url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
   background-size: cover;
