@@ -40,8 +40,8 @@ body {
 }
 
 .header .logo {
-  height: 35px;
-  border-radius: 20%;
+  height: 70px;
+  border-radius: 10%;
 }
 
 .text-box {
@@ -52,6 +52,7 @@ body {
   text-transform: uppercase;
   display: block;
   transform: translate(-50%, -50%);
+  backface-visibility: hidden;
 }
 
 .text-box .tourex-1 {
@@ -59,12 +60,52 @@ body {
   font-size: 70px;
   letter-spacing: 38px;
   font-weight: 700;
+  animation-name: moveLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 3;
 }
 
 .text-box .tourex-2 {
   display: block;
   font-size: 15px;
   letter-spacing: 7px;
+  animation: moveRight 1.5s ease-in-out infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  75% {
+    transform: translateX(20px);
+    opacity: 0.5;
+    color: red;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -87,6 +128,6 @@ body {
 
   .text-box .tourex-2 {
     font-size: 0.6rem;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
   }
 }
