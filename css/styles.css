@@ -199,3 +199,21 @@ body {
     letter-spacing: 2.5px;
   }
 }
+
+.btn::after {
+  transition: none;
+  animation: names 1s infinite;
+}
+
+
+@keyframes names {
+  0% {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
