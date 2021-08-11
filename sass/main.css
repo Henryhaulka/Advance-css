@@ -73,7 +73,7 @@ body {
   }
 }
 
-@keyframes moveLeft {
+@keyframes moveleft {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-500px);
@@ -94,7 +94,7 @@ body {
   }
 }
 
-@-webkit-keyframes moveRight {
+@-webkit-keyframes moveright {
   0% {
     opacity: 0;
     -webkit-transform: translateX(100px);
@@ -114,7 +114,7 @@ body {
   }
 }
 
-@keyframes moveRight {
+@keyframes moveright {
   0% {
     opacity: 0;
     -webkit-transform: translateX(100px);
@@ -193,7 +193,7 @@ body {
   font-size: 70px;
   letter-spacing: 38px;
   font-weight: 700;
-  -webkit-animation-name: movereft;
+  -webkit-animation-name: moveleft;
   animation-name: moveleft;
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
