@@ -1,0 +1,85 @@
+.header {
+  /* vh-viewport height */
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(27, 27, 26, 0.5),
+      rgba(37, 231, 157, 0.795)
+    ),
+    url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-size: cover;
+  height: 95vh;
+  background-position: top;
+
+  /* coordinate (x y, x y,x y,x y) */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  .logo-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .logo {
+    height: 50px;
+    border-radius: 10%;
+  }
+
+  .text-box {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    color: $white;
+    text-transform: uppercase;
+    display: block;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+    text-align: center;
+  }
+
+  .text-box .tourex-1 {
+    display: block;
+    font-size: 70px;
+    letter-spacing: 38px;
+    font-weight: 700;
+    animation-name: moveLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+  }
+
+  .text-box .tourex-2 {
+    display: block;
+    font-size: 15px;
+    letter-spacing: 7px;
+    animation: moveRight 1.5s ease-in-out infinite;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    .logo-box {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .logo {
+      height: 25px;
+      border-radius: 10%;
+    }
+
+    .text-box .tourex-1 {
+      font-size: 3rem;
+      letter-spacing: 10px;
+      font-weight: 700;
+    }
+
+    .text-box .tourex-2 {
+      font-size: 0.6rem;
+      letter-spacing: 2.5px;
+    }
+  }
+}
