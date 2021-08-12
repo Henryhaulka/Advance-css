@@ -138,6 +138,24 @@ body {
   text-align: center;
 }
 
+.margin-bottom-big {
+  margin-bottom: 2.2rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 0.8rem;
+}
+
+.tertiary-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.paragraph-1:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
 .header {
   /* vh-viewport height */
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
@@ -310,5 +328,26 @@ body {
   -webkit-transform: skewX(15deg) skewY(2deg) scale(1.1);
   transform: skewX(15deg) skewY(2deg) scale(1.1);
   text-shadow: 5px 10px 10px rgba(22, 21, 21, 0.205);
+}
+
+.first-grid {
+  display: -ms-grid;
+  display: grid;
+
+  /* -ms-grid-columns: (1fr)[2]; */
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .section_about .section_about__header {
+    font-size: 0.7rem;
+  }
+
+  .section_about .first-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=main.css.map */
