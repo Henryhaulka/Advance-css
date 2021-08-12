@@ -46,3 +46,13 @@
   transform: scaleX(1.3) scaleY(1.6);
   opacity: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .header .btn::after {
+    animation: pop 1s infinite;
+  }
+
+  .header .btn:hover::after {
+    transform: none;
+  }
+}
