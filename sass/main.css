@@ -52,7 +52,7 @@ body {
   }
 }
 
-@-webkit-keyframes moveLeft {
+@-webkit-keyframes moveleft {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-500px);
@@ -134,25 +134,14 @@ body {
   }
 }
 
+.center-text {
+  text-align: center;
+}
+
 .header {
   /* vh-viewport height */
-
-  background-image:
-    -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(27, 27, 26, 0.5)),
-      to(rgba(37, 231, 157, 0.795))
-    ),
-    url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(27, 27, 26, 0.5),
-      rgba(37, 231, 157, 0.795)
-    ),
-    url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
   background-size: cover;
   height: 95vh;
   background-position: top;
@@ -212,6 +201,35 @@ body {
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .header .logo-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .header .logo {
+    height: 25px;
+    border-radius: 10%;
+  }
+
+  .header .text-box .tourex-1 {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: 700;
+  }
+
+  .header .text-box .tourex-2 {
+    font-size: 0.6rem;
+    letter-spacing: 2.5px;
+  }
+
+  .section_about__header {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -268,27 +286,29 @@ body {
   opacity: 0;
 }
 
-@media screen and (max-width: 767px) {
-  .header .logo-box {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
+.section_about {
+  background-color: #f0eeee;
+  padding: 10rem 0;
+  margin-top: -20vh;
+}
 
-  .header .logo {
-    height: 25px;
-    border-radius: 10%;
-  }
+.section_about .section_about__header {
+  text-transform: uppercase;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 196, 15, 0.76)), to(rgba(4, 51, 4, 0.863)));
+  background: linear-gradient(to right, rgba(15, 196, 15, 0.76), rgba(4, 51, 4, 0.863));
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  letter-spacing: 3px;
+  font-size: 30px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
 
-  .header .text-box .tourex-1 {
-    font-size: 3rem;
-    letter-spacing: 10px;
-    font-weight: 700;
-  }
-
-  .header .text-box .tourex-2 {
-    font-size: 0.6rem;
-    letter-spacing: 2.5px;
-  }
+.section_about .section_about__header:hover {
+  -webkit-transform: skewX(15deg) skewY(2deg) scale(1.1);
+  transform: skewX(15deg) skewY(2deg) scale(1.1);
+  text-shadow: 5px 10px 10px rgba(22, 21, 21, 0.205);
 }
 /*# sourceMappingURL=main.css.map */
