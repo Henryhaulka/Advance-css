@@ -162,6 +162,10 @@ body {
   text-align: center;
 }
 
+.left-text {
+  text-align: left;
+}
+
 .margin-bottom-big {
   margin-bottom: 5rem;
 }
@@ -207,22 +211,8 @@ body {
 
 .header {
   /* vh-viewport height */
-  background-image:
-    -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(27, 27, 26, 0.5)),
-      to(rgba(37, 231, 157, 0.795))
-    ),
-    url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(27, 27, 26, 0.5),
-      rgba(37, 231, 157, 0.795)
-    ),
-    url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
   background-size: cover;
   height: 95vh;
   background-position: top;
@@ -388,20 +378,8 @@ body {
 .section_about .section_about__header {
   text-transform: uppercase;
   font-weight: 700;
-  background:
-    -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(15, 196, 15, 0.76)),
-      to(rgba(4, 51, 4, 0.863))
-    );
-  background:
-    linear-gradient(
-      to right,
-      rgba(15, 196, 15, 0.76),
-      rgba(4, 51, 4, 0.863)
-    );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 196, 15, 0.76)), to(rgba(4, 51, 4, 0.863)));
+  background: linear-gradient(to right, rgba(15, 196, 15, 0.76), rgba(4, 51, 4, 0.863));
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
@@ -421,7 +399,7 @@ body {
   display: -ms-grid;
   display: grid;
 
-  /* -ms-grid-columns: (1fr) [2]; */
+  /* -ms-grid-columns: (1fr)[2]; */
   grid-template-columns: repeat(2, 1fr);
   width: 80%;
   margin: auto;
@@ -429,10 +407,81 @@ body {
 
 @media screen and (max-width: 767px) {
   .section_about .section_about__header {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .section_about .first-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding-bottom: 8rem;
+  }
+
+  .section_about .first-grid .tertiary-heading {
+    font-size: 1rem;
+  }
+}
+
+.feature {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-size: cover;
+  padding: 10rem;
+  -webkit-transform: skewY(-7deg);
+  transform: skewY(-7deg);
+  margin-top: -5rem;
+}
+
+.feature__row {
+  display: -ms-grid;
+  display: grid;
+
+  /* -ms-grid-columns: (1fr)[4]; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  -webkit-transform: skewY(7deg);
+  transform: skewY(7deg);
+}
+
+.feature__row__1 {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-shadow: 7px 10px 10px rgba(27, 27, 26, 0.5);
+  box-shadow: 7px 10px 10px rgba(27, 27, 26, 0.5);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+.feature__row__1 i {
+  font-size: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(37, 231, 157, 0.795)), to(rgba(10, 102, 10, 0.863)));
+  background: linear-gradient(to right, rgba(37, 231, 157, 0.795), rgba(10, 102, 10, 0.863));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+}
+
+.feature__row__1 h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.feature__row__1:hover {
+  -webkit-transform: scale(1.1) translateY(-3px);
+  transform: scale(1.1) translateY(-3px);
+  z-index: 5;
+}
+
+@media screen and (max-width: 767px) {
+  .feature {
+    padding: 3rem 1rem 3rem 1rem;
+    margin-top: -4rem;
+  }
+
+  .feature__row {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
