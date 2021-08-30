@@ -14,6 +14,11 @@
   color: #777;
 }
 
+.btn-green {
+  background-color: green;
+  color: $white;
+}
+
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(27, 27, 26, 0.5);
@@ -40,6 +45,10 @@
 .btn-white::after {
   background-color: $white;
   color: #777;
+}
+
+.btn-green::after {
+  background-color: green;
 }
 
 .btn:hover::after {
