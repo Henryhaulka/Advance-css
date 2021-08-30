@@ -7,9 +7,10 @@
     ),
     url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
   background-size: cover;
-  padding: 10rem;
+  padding: 10rem 5rem 10rem 5rem;
   transform: skewY(-7deg);
   margin-top: -5rem;
+  z-index: 3;
 
   &__row {
     display: grid;
@@ -55,5 +56,11 @@
     &__row {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .feature {
+    padding: 5rem 2rem 7rem 2rem;
   }
 }

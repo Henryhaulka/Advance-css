@@ -1,0 +1,106 @@
+
+.card {
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  height: 32rem;
+
+  &_side {
+    height: 32rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.596);
+
+    &__front {
+      background-color: $white;
+    }
+
+    &__back {
+      transform: rotateY(-180deg);
+
+      &_1 {
+        background-image: linear-gradient(to bottom right, $yellow_light, $yellow_deep);
+      }
+    }
+  }
+
+  &:hover &_side__front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &_side__back {
+    transform: rotateY(0);
+  }
+
+  .card_picture {
+    background-size: cover;
+    height: 13rem;
+    background-blend-mode: hue;
+
+    &_1 {
+      background-image: linear-gradient(to bottom right, $yellow_light, $yellow_deep), url("https://images.unsplash.com/photo-1628171288978-6dad8af9505d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU2fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+  }
+
+  &_heading {
+    font-size: 1.7rem;
+    color: $white;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    text-transform: uppercase;
+    width: 75%;
+
+    &_span {
+      padding: 1rem 0.5rem;
+      box-decoration-break: clone;
+
+      &_1 {
+        background-image: linear-gradient(to bottom right, rgba($yellow_light, 0.7), rgba($yellow_deep, 0.7));
+      }
+    }
+  }
+
+  &_details {
+    width: 70%;
+    margin: auto;
+
+    ul {
+      padding-top: 1.5rem;
+      color: $ash;
+      list-style: none;
+
+      li {
+        padding: 0.7rem;
+      }
+
+      li:not(:last-child) {
+        border-bottom: 1px solid  rgba($ash, 0.6);
+      }
+    }
+  }
+
+  &_cta {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+  }
+
+  &_price_box {
+    &_tag {
+      font-size: 5rem;
+      font-weight: 100;
+    }
+  }
+}
