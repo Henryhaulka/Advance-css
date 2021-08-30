@@ -52,7 +52,7 @@ body {
   }
 }
 
-@-webkit-keyframes moveLeft {
+@-webkit-keyframes moveleft {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-500px);
@@ -134,25 +134,89 @@ body {
   }
 }
 
+@-webkit-keyframes pop {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleX(1.3) scaleY(1.6);
+    transform: scaleX(1.3) scaleY(1.6);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleX(1.3) scaleY(1.6);
+    transform: scaleX(1.3) scaleY(1.6);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.margin-bottom-big {
+  margin-bottom: 5rem;
+}
+
+.margin-top-small {
+  margin-top: 5rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 0.8rem;
+}
+
+.tertiary-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.paragraph-1:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.btn-text:visited,
+.btn-text:link {
+  color: rgba(14, 158, 14, 0.918);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(14, 158, 14, 0.918);
+  padding: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-text:hover {
+  background-color: rgba(14, 158, 14, 0.918);
+  color: white;
+  border-radius: 2px;
+  padding: 5px;
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.692);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.692);
+}
+
+.btn-text i {
+  margin-left: 5px;
+}
+
 .header {
   /* vh-viewport height */
-
-  background-image:
-    -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(27, 27, 26, 0.5)),
-      to(rgba(37, 231, 157, 0.795))
-    ),
-    url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(27, 27, 26, 0.5),
-      rgba(37, 231, 157, 0.795)
-    ),
-    url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
   background-size: cover;
   height: 95vh;
   background-position: top;
@@ -212,6 +276,35 @@ body {
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .header .logo-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .header .logo {
+    height: 25px;
+    border-radius: 10%;
+  }
+
+  .header .text-box .tourex-1 {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: 700;
+  }
+
+  .header .text-box .tourex-2 {
+    font-size: 0.6rem;
+    letter-spacing: 2.5px;
+  }
+
+  .section_about__header {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -227,6 +320,11 @@ body {
 .btn-white {
   background-color: white;
   color: #777;
+}
+
+.btn-green {
+  background-color: green;
+  color: white;
 }
 
 .btn:hover {
@@ -262,6 +360,10 @@ body {
   color: #777;
 }
 
+.btn-green::after {
+  background-color: green;
+}
+
 .btn:hover::after {
   -webkit-transform: scaleX(1.3) scaleY(1.6);
   transform: scaleX(1.3) scaleY(1.6);
@@ -269,26 +371,367 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .header .logo-box {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  .header .btn::after {
+    -webkit-animation: pop 1s infinite;
+    animation: pop 1s infinite;
   }
 
-  .header .logo {
-    height: 25px;
-    border-radius: 10%;
+  .header .btn:hover::after {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.section_about {
+  background-color: #f0eeee;
+  padding: 10rem 0;
+  margin-top: -20vh;
+}
+
+.section_about__header,
+.section_tour__header {
+  text-transform: uppercase;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 196, 15, 0.76)), to(rgba(4, 51, 4, 0.863)));
+  background: linear-gradient(to right, rgba(15, 196, 15, 0.76), rgba(4, 51, 4, 0.863));
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  letter-spacing: 3px;
+  font-size: 30px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.section_about__header:hover,
+.section_tour__header:hover {
+  -webkit-transform: skewX(15deg) skewY(2deg) scale(1.1);
+  transform: skewX(15deg) skewY(2deg) scale(1.1);
+  text-shadow: 5px 10px 10px rgba(22, 21, 21, 0.205);
+}
+
+.first-grid {
+  display: -ms-grid;
+  display: grid;
+
+  /* -ms-grid-columns: (1fr)[2]; */
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .section_about .section_about__header {
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
-  .header .text-box .tourex-1 {
-    font-size: 3rem;
-    letter-spacing: 10px;
-    font-weight: 700;
+  .section_about .first-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding-bottom: 8rem;
   }
 
-  .header .text-box .tourex-2 {
-    font-size: 0.6rem;
-    letter-spacing: 2.5px;
+  .section_about .first-grid .tertiary-heading {
+    font-size: 1rem;
   }
+}
+
+.feature {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-size: cover;
+  padding: 10rem 5rem 10rem 5rem;
+  -webkit-transform: skewY(-7deg);
+  transform: skewY(-7deg);
+  margin-top: -5rem;
+  z-index: 3;
+}
+
+.feature__row {
+  display: -ms-grid;
+  display: grid;
+
+  /* -ms-grid-columns: (1fr)[4]; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  -webkit-transform: skewY(7deg);
+  transform: skewY(7deg);
+}
+
+.feature__row__1 {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-shadow: 7px 10px 10px rgba(27, 27, 26, 0.5);
+  box-shadow: 7px 10px 10px rgba(27, 27, 26, 0.5);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+.feature__row__1 i {
+  font-size: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(37, 231, 157, 0.795)), to(rgba(10, 102, 10, 0.863)));
+  background: linear-gradient(to right, rgba(37, 231, 157, 0.795), rgba(10, 102, 10, 0.863));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+}
+
+.feature__row__1 h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.feature__row__1:hover {
+  -webkit-transform: scale(1.1) translateY(-3px);
+  transform: scale(1.1) translateY(-3px);
+  z-index: 5;
+}
+
+@media screen and (max-width: 767px) {
+  .feature {
+    padding: 3rem 1rem 3rem 1rem;
+    margin-top: -4rem;
+  }
+
+  .feature__row {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .feature {
+    padding: 5rem 2rem 7rem 2rem;
+  }
+}
+
+.composition {
+  position: relative;
+}
+
+.composition__img {
+  width: 55%;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.774);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.774);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 1;
+  outline-offset: 0.7rem;
+}
+
+.composition__img-p1 {
+  position: absolute;
+  left: 0;
+  top: -1.5rem;
+}
+
+.composition__img-p2 {
+  position: absolute;
+  right: 0;
+  top: 1.1rem;
+}
+
+.composition__img-p3 {
+  position: absolute;
+  top: 4rem;
+  left: 5rem;
+}
+
+.composition__img:hover {
+  -webkit-transform: scale(1.1) translateY(-0.6rem);
+  transform: scale(1.1) translateY(-0.6rem);
+  outline: 0.5rem solid rgba(9, 160, 9, 0.795);
+  z-index: 5;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.774);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.774);
+}
+
+.composition:hover .composition__img:not(:hover) {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 767px) {
+  .composition__img-p2 {
+    top: -0.7rem;
+  }
+
+  .composition__img-p3 {
+    top: 2rem;
+    left: 2rem;
+  }
+}
+
+.section_tour {
+  background-color: #f0eeee;
+  padding: 10rem 5rem 5rem 5rem;
+  margin-top: -5rem;
+  text-align: center;
+}
+
+.section_tour_row {
+  display: -ms-grid;
+  display: grid;
+
+  /* -ms-grid-columns: (1fr)[3]; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.card {
+  -webkit-perspective: 100rem;
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  height: 32rem;
+}
+
+.card_side {
+  height: 32rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.596);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.596);
+}
+
+.card_side__front {
+  background-color: white;
+}
+
+.card_side__back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card_side__back_1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
+}
+
+.card_side__back_2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(14, 158, 14, 0.918)), to(#065306));
+  background-image: linear-gradient(to bottom right, rgba(14, 158, 14, 0.918), #065306);
+}
+
+.card_side__back_3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(rgba(0, 0, 255, 0.7)));
+  background-image: linear-gradient(to bottom right, #2998ff, rgba(0, 0, 255, 0.7));
+}
+
+.card:hover .card_side__front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card_side__back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+.card .card_picture {
+  background-size: cover;
+  height: 13rem;
+}
+
+.card .card_picture_1,
+.card .card_picture_2,
+.card .card_picture_3 {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.card .card_picture_1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url("https://images.unsplash.com/photo-1628171288978-6dad8af9505d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU2fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url("https://images.unsplash.com/photo-1628171288978-6dad8af9505d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU2fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-blend-mode: hue;
+}
+
+.card .card_picture_2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(14, 158, 14, 0.918)), to(rgba(14, 158, 14, 0.918))), url("https://i.natgeofe.com/n/8f633a47-1da9-4873-b851-0ed1bdd93e9a/hiking-survival-day-hike-alone.jpg?w=636&h=424");
+  background-image: linear-gradient(to bottom right, rgba(14, 158, 14, 0.918), rgba(14, 158, 14, 0.918)), url("https://i.natgeofe.com/n/8f633a47-1da9-4873-b851-0ed1bdd93e9a/hiking-survival-day-hike-alone.jpg?w=636&h=424");
+  background-blend-mode: screen;
+}
+
+.card .card_picture_3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#2998ff)), url("https://ak.picdn.net/shutterstock/videos/5362829/thumb/3.jpg");
+  background-image: linear-gradient(to bottom right, #2998ff, #2998ff), url("https://ak.picdn.net/shutterstock/videos/5362829/thumb/3.jpg");
+  background-blend-mode: screen;
+}
+
+.card_heading {
+  font-size: 1.7rem;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  text-transform: uppercase;
+  width: 75%;
+}
+
+.card_heading_span {
+  padding: 1rem 0.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card_heading_span_1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.7)), to(rgba(255, 119, 48, 0.7)));
+  background-image: linear-gradient(to bottom right, rgba(255, 185, 0, 0.7), rgba(255, 119, 48, 0.7));
+}
+
+.card_heading_span_2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(14, 158, 14, 0.7)), to(rgba(14, 158, 14, 0.7)));
+  background-image: linear-gradient(to bottom right, rgba(14, 158, 14, 0.7), rgba(14, 158, 14, 0.7));
+}
+
+.card_heading_span_3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.7)), to(rgba(41, 152, 255, 0.7)));
+  background-image: linear-gradient(to bottom right, rgba(41, 152, 255, 0.7), rgba(41, 152, 255, 0.7));
+}
+
+.card_details {
+  width: 70%;
+  margin: auto;
+}
+
+.card_details ul {
+  padding-top: 1.5rem;
+  color: #777;
+  list-style: none;
+}
+
+.card_details ul li {
+  padding: 0.7rem;
+}
+
+.card_details ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(119, 119, 119, 0.6);
+}
+
+.card_cta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+
+.card_price_box_tag {
+  font-size: 5rem;
+  font-weight: 100;
 }
 /*# sourceMappingURL=main.css.map */

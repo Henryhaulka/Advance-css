@@ -1,0 +1,55 @@
+.composition {
+  position: relative;
+
+  &__img {
+    width: 55%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.774);
+    transition: all 0.2s;
+    z-index: 1;
+    outline-offset: 0.7rem;
+
+    &-p1 {
+      position: absolute;
+      left: 0;
+      top: -1.5rem;
+    }
+
+    &-p2 {
+      position: absolute;
+      right: 0;
+      top: 1.1rem;
+    }
+
+    &-p3 {
+      position: absolute;
+      top: 4rem;
+      left: 5rem;
+    }
+
+    &:hover {
+      transform: scale(1.1) translateY(-0.6rem);
+      outline: 0.5rem solid rgba(9, 160, 9, 0.795);
+      z-index: 5;
+      box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.774);
+    }
+  }
+
+  &:hover &__img:not(:hover) {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .composition {
+    &__img {
+      &-p2 {
+        top: -0.7rem;
+      }
+
+      &-p3 {
+        top: 2rem;
+        left: 2rem;
+      }
+    }
+  }
+}

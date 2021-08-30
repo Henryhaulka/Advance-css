@@ -2,3 +2,57 @@
 .center-text {
   text-align: center;
 }
+
+.left-text {
+  text-align: left;
+}
+
+.margin-bottom-big {
+  margin-bottom: 5rem;
+}
+
+.margin-top-small {
+  margin-top: 5rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 0.8rem;
+}
+
+.tertiary-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.paragraph-1 {
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.btn-text {
+  &:visited,
+  &:link {
+    color: $lemon;
+    text-decoration: none;
+    border-bottom: 1px solid $lemon;
+    padding: 3px;
+    transition: all 0.2s;
+
+    // display: inline-block;
+  }
+
+  &:hover {
+    background-color: $lemon;
+    color: $white;
+    border-radius: 2px;
+    padding: 5px;
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.692);
+  }
+
+  i {
+    margin-left: 5px;
+  }
+}
