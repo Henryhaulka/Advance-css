@@ -158,6 +158,10 @@ body {
   margin-bottom: 5rem;
 }
 
+.margin-top-small {
+  margin-top: 5rem;
+}
+
 .margin-bottom-sm {
   margin-bottom: 0.8rem;
 }
@@ -300,6 +304,11 @@ body {
   color: #777;
 }
 
+.btn-green {
+  background-color: green;
+  color: white;
+}
+
 .btn:hover {
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
@@ -331,6 +340,10 @@ body {
 .btn-white::after {
   background-color: white;
   color: #777;
+}
+
+.btn-green::after {
+  background-color: green;
 }
 
 .btn:hover::after {
@@ -530,7 +543,7 @@ grid-template-columns: 1fr;
 
 .section_tour {
   background-color: #f0eeee;
-  padding: 10rem 5rem 30rem 5rem;
+  padding: 10rem 5rem 5rem 5rem;
   margin-top: -5rem;
   text-align: center;
 }
@@ -538,8 +551,8 @@ grid-template-columns: 1fr;
 .section_tour_row {
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (1fr)[3]; */
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
 }
 
@@ -607,9 +620,7 @@ grid-template-columns: 1fr;
   height: 13rem;
 }
 
-.card .card_picture_1,
-.card .card_picture_2,
-.card .card_picture_3 {
+.card .card_picture_1, .card .card_picture_2, .card .card_picture_3 {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 }
