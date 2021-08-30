@@ -28,6 +28,14 @@
       &_1 {
         background-image: linear-gradient(to bottom right, $yellow_light, $yellow_deep);
       }
+
+      &_2 {
+        background-image: linear-gradient(to bottom right, $lemon, rgb(6, 83, 6));
+      }
+
+      &_3 {
+        background-image: linear-gradient(to bottom right, $blue_light, rgba(blue, 0.7));
+      }
     }
   }
 
@@ -42,12 +50,27 @@
   .card_picture {
     background-size: cover;
     height: 13rem;
-    background-blend-mode: hue;
+
+    &_1,
+    &_2,
+    &_3 {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
 
     &_1 {
       background-image: linear-gradient(to bottom right, $yellow_light, $yellow_deep), url("https://images.unsplash.com/photo-1628171288978-6dad8af9505d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU2fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      background-blend-mode: hue;
+    }
+
+    &_2 {
+      background-image: linear-gradient(to bottom right, $lemon, $lemon), url("https://i.natgeofe.com/n/8f633a47-1da9-4873-b851-0ed1bdd93e9a/hiking-survival-day-hike-alone.jpg?w=636&h=424");
+      background-blend-mode: screen;
+    }
+
+    &_3 {
+      background-image: linear-gradient(to bottom right, $blue_light, $blue_light), url("https://ak.picdn.net/shutterstock/videos/5362829/thumb/3.jpg");
+      background-blend-mode: screen;
     }
   }
 
@@ -66,6 +89,14 @@
 
       &_1 {
         background-image: linear-gradient(to bottom right, rgba($yellow_light, 0.7), rgba($yellow_deep, 0.7));
+      }
+
+      &_2 {
+        background-image: linear-gradient(to bottom right, rgba($lemon, 0.7), rgba($lemon, 0.7));
+      }
+
+      &_3 {
+        background-image: linear-gradient(to bottom right, rgba($blue_light, 0.7), rgba($blue_light, 0.7));
       }
     }
   }
