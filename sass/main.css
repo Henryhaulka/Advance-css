@@ -556,11 +556,6 @@ body {
   grid-gap: 3rem;
 }
 
-.section-stories {
-  padding: 3rem 0;
-  background-color: #f0eeee;
-}
-
 .card {
   -webkit-perspective: 100rem;
           perspective: 100rem;
@@ -710,5 +705,46 @@ body {
 .card_price_box_tag {
   font-size: 5rem;
   font-weight: 100;
+}
+
+.section-stories {
+  padding: 3rem 0;
+  background-color: #f0eeee;
+}
+
+.story {
+  background-color: white;
+  border-radius: 5px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 3rem  2rem 5rem 3rem;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+}
+
+.story > * {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
+.story h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.story-shape {
+  width: 10rem;
+  height: 10rem;
+  float: left;
+  background-color: blueviolet;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-1rem) skewX(12deg);
+          transform: translateX(-1rem) skewX(12deg);
+}
+
+.story-img {
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */
