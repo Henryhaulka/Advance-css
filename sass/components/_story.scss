@@ -1,0 +1,35 @@
+.section-stories {
+  padding: 3rem 0;
+  background-color: $light_grey;
+}
+
+.story {
+  background-color: $white;
+  border-radius: 5px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 3rem  2rem 5rem 3rem;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  h3 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+  &-shape {
+      width: 10rem;
+      height: 10rem;
+      float: left;
+      background-color: blueviolet;
+      shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      transform: translateX(-1rem) skewX(12deg);
+
+  }
+  &-img {
+      height: 100%;
+  }
+}
