@@ -158,6 +158,10 @@ body {
   margin-bottom: 5rem;
 }
 
+.margin-bottom-zero {
+  margin-bottom: 0;
+}
+
 .margin-top-small {
   margin-top: 5rem;
 }
@@ -795,5 +799,77 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.section-booking {
+  padding: 10rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(14, 158, 14, 0.918)), to(rgba(87, 206, 87, 0.918)));
+  background: linear-gradient(to right bottom, rgba(14, 158, 14, 0.918), rgba(87, 206, 87, 0.918));
+}
+
+.section-booking-form {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("http://blog.bookingsnigeria.com/wp-content/uploads/2016/05/obudu-2-1170x550.jpg");
+  background-size: cover;
+  height: 30rem;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+.section-booking-content {
+  width: 50%;
+  padding: 2.2rem;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-input {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: inherit;
+  width: 90%;
+  border-bottom: 3px solid transparent;
+  display: block;
+  font-size: 1rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.form-input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid rgba(14, 158, 14, 0.918);
+}
+
+.form-input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: grey;
+  opacity: 0.7;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form-input:placeholder-shown + .form-label {
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
 }
 /*# sourceMappingURL=main.css.map */
