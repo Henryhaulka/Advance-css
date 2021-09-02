@@ -170,6 +170,10 @@ body {
   margin-bottom: 5rem;
 }
 
+.margin-bottom-zero {
+  margin-bottom: 0;
+}
+
 .margin-top-small {
   margin-top: 5rem;
 }
@@ -305,6 +309,7 @@ body {
   }
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -315,6 +320,7 @@ body {
   transition: all 0.2s;
   position: relative;
   margin-top: 15px;
+  border: none;
 }
 
 .btn-white {
@@ -733,5 +739,222 @@ body {
 .card_price_box_tag {
   font-size: 5rem;
   font-weight: 100;
+}
+
+.section-stories {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.story {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 4rem 2rem 4rem 2rem;
+  padding-left: 7rem;
+  -webkit-transform: skewX(-12deg);
+  transform: skewX(-12deg);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+.story > * {
+  -webkit-transform: skewX(12deg);
+  transform: skewX(12deg);
+}
+
+.story h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.story-shape {
+  width: 10rem;
+  height: 10rem;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-1rem) skewX(12deg);
+  transform: translateX(-1rem) skewX(12deg);
+  position: relative;
+}
+
+.story-img {
+  height: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.story-figcaption {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+  transform: translate(-50%, 20%);
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.story:hover .story-figcaption {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.story:hover .story-img {
+  -webkit-filter: blur(3px) brightness(80%);
+  filter: blur(3px) brightness(80%);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.bg-video-content {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.section-booking {
+  padding: 10rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(14, 158, 14, 0.918)), to(rgba(87, 206, 87, 0.918)));
+  background: linear-gradient(to right bottom, rgba(14, 158, 14, 0.918), rgba(87, 206, 87, 0.918));
+}
+
+.section-booking-form {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("http://blog.bookingsnigeria.com/wp-content/uploads/2016/05/obudu-2-1170x550.jpg");
+  background-size: cover;
+  height: 30rem;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+.section-booking-content {
+  width: 50%;
+  padding: 2.2rem;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-input {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: inherit;
+  width: 90%;
+  border-bottom: 3px solid transparent;
+  display: block;
+  font-size: 1rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: grey;
+  opacity: 0.7;
+}
+
+.form-input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  border-bottom: 3px solid rgba(14, 158, 14, 0.918);
+}
+
+.form-input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form-input:placeholder-shown + .form-label {
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+  transform: translateY(3rem);
+}
+
+.form-radio {
+  display: inline-block;
+  width: 49%;
+}
+
+.form-label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.form-radio-span {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 5px solid rgba(14, 158, 14, 0.918);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.24rem;
+}
+
+.form-radio-span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: rgba(14, 158, 14, 0.918);
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.form-input-radio:checked + .form-label-radio .form-radio-span::after {
+  opacity: 1;
+}
+
+.form-input-radio {
+  display: none;
+}
+
+.form-bn {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.form-btn {
+  margin-top: 3rem;
 }
 /*# sourceMappingURL=main.css.map */
