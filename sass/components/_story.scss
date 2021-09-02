@@ -4,7 +4,7 @@
 }
 
 .story {
-  background-color: rgba($white, 0.6) ;
+  background-color: rgba($white, 0.6);
   border-radius: 5px;
   width: 75%;
   margin: 0 auto;
@@ -50,7 +50,6 @@
     text-align: center;
     opacity: 0;
     transition: 0.5s all;
-   
   }
 
   &:hover &-figcaption {
@@ -59,6 +58,6 @@
   }
 
   &:hover &-img {
-    filter: blur(3px) brightness(80%);  
+    filter: blur(3px) brightness(80%);
   }
 }
