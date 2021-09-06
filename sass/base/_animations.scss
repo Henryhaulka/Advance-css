@@ -5,7 +5,7 @@
 
 @keyframes names {
   0% {
-    transform: translateY(70px);
+    transform: translateY(7rem);
     opacity: 0;
   }
 
@@ -18,11 +18,11 @@
 @keyframes moveleft {
   0% {
     opacity: 0;
-    transform: translateX(-500px);
+    transform: translateX(-50rem);
   }
 
   75% {
-    transform: translateX(200px);
+    transform: translateX(20rem);
     opacity: 0.5;
     color: orangered;
   }
@@ -36,11 +36,11 @@
 @keyframes moveright {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   75% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
     opacity: 0.5;
   }
 

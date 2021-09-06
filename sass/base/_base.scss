@@ -7,11 +7,32 @@
   box-sizing: border-box;
 }
 
+html {
+   @include respond(big-desk) {
+    font-size: 75%; //1rem = 12
+  }
+  //this defines 1rem is
+  //default browers 1rem/1em = 16px
+
+  font-size: 62,5%; //set 1rem = 10px 10/16 *100
+  
+   @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px 9/16
+  }
+
+  @include respond(phone) {
+    font-size: 50%;  //1rem = 8px 8/16 =
+  }
+
+   @include respond(tab-port) {
+    font-size: 50%;
+  }
+}
+
 body {
-  font-size: 16px;
   font-family: "Lato", sans-serif;
   color: $ash;
   font-weight: 400;
   line-height: 1.7;
-  padding: 10px;
+  padding: 1rem;
 }
