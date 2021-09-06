@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,6 +17,23 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
+    <div class="nav">
+      <input type="checkbox" class="nav-input" id="toggle">
+      <label for="toggle" class="nav-label">
+        <span class="nav-button"></span>
+      </label>
+      <div class="nav-background">&nbsp;</div>
+
+      <div class="nav-contain">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="" class="nav-link"> <span>01</span> About Natours</a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span>02</span>  Your benefits</a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span>03</span> Popular tours</a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span>04</span> Stories</a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span>05</span> Book now</a></li>
+        </ul>
+      </div>
+    </div>
     <header class="header">
       <div class="logo-box">
         <a href="#">
@@ -32,7 +49,7 @@
           <span class="tourex-1">Natours</span>
           <span class="tourex-2">is where you experience nature</span>
         </h1>
-        <a href="" class="btn btn-white btn-animated">Check our tours</a>
+        <a href="#pop-section" class="btn btn-white btn-animated">Check our tours</a>
       </div>
     </header>
     <section class="section_about">
@@ -125,7 +142,7 @@
       </div>
     </section>
 
-    <section class="section_tour">
+    <section class="section_tour" id="pop-section">
       <h2 class="section_tour__header margin-bottom-big">most popular tours</h2>
       <div class="section_tour_row">
         <div class="section_tour_row_1">
@@ -153,7 +170,7 @@
                   <div class="card_price_box_only">Only</div>
                   <div class="card_price_box_tag">$279</div>
                 </div>
-                <a href="" class="btn btn-white btn-animated">Book Now!</a>
+                <a href="#pop" class="btn btn-white btn-animated">Book Now!</a>
               </div>
             </div>
           </div>
@@ -183,7 +200,7 @@
                   <div class="card_price_box_only">Only</div>
                   <div class="card_price_box_tag">$479</div>
                 </div>
-                <a href="" class="btn btn-white btn-animated">Book Now!</a>
+                <a href="#pop" class="btn btn-white btn-animated">Book Now!</a>
               </div>
             </div>
           </div>
@@ -213,7 +230,7 @@
                   <div class="card_price_box_only">Only</div>
                   <div class="card_price_box_tag">$879</div>
                 </div>
-                <a href="" class="btn btn-white btn-animated">Book Now!</a>
+                <a href="#pop" class="btn btn-white btn-animated">Book Now!</a>
               </div>
             </div>
           </div>
@@ -376,5 +393,20 @@
         </div>
       </div>
     </footer>
+    <div class="pop" id="pop" >
+      <div class="pop-content">
+        <div class="pop-left">
+          <img src="https://media.wildernessinquiry.org/Itinerary/BWCA-Family-Canoe-and-Hike/lg/BWCA-Family-Canoe-and-Hike-31396.jpg" alt="people on tour" class="pop-pic">
+          <img src="https://www.verywellfit.com/thmb/MdDIAf6amIhN7IieLtWa9wVKlKA=/500x350/filters:no_upscale():max_bytes(150000):strip_icc()/76510168-56a9da225f9b58b7d0ff8cb4.jpg" alt="A walking tourist" class="pop-pic">
+        </div>
+        <div class="pop-right">
+          <a href="#pop-section" class="pop-close">&times;</a>
+          <h2  class="section_about__header"> Start Booking now!!!</h2>
+          <h3 class="pop-info">It is important you carefully read the Terms and Conditions</h3>
+          <p class="pop-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore harum neque commodi culpa. Tempora inventore nisi maiores deleniti vitae modi, eius veniam, et, aliquid voluptatum in vero ullam quas aspernatur.</p>
+          <button class="btn btn-green pop-button">Book Now !!!</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
