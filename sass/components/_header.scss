@@ -18,18 +18,21 @@
 
   .logo-box {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 1rem;
+    left: 1rem;
   }
 
   .logo {
-    height: 50px;
+    height: 5rem;
     border-radius: 10%;
   }
 
   .text-box {
     position: absolute;
-    top: 35%;
+    top: 40%;
+    @include respond(phone) {
+    top: 50%;
+  }
     left: 50%;
     color: $white;
     text-transform: uppercase;
@@ -40,9 +43,13 @@
   }
 
   .text-box .tourex-1 {
-    display: block;
-    font-size: 70px;
-    letter-spacing: 38px;
+   
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+     display: block;
+    font-size: 5rem;
+    letter-spacing: 3.8rem;
     font-weight: 700;
     animation-name: moveleft;
     animation-duration: 1.5s;
@@ -52,40 +59,9 @@
 
   .text-box .tourex-2 {
     display: block;
-    font-size: 15px;
-    letter-spacing: 7px;
+    font-size: 1.5rem;
+    letter-spacing: 0.7rem;
     animation: moveright 1.5s ease-in-out infinite;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header {
-    .logo-box {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    .logo {
-      height: 25px;
-      border-radius: 10%;
-    }
-
-    .text-box .tourex-1 {
-      font-size: 3rem;
-      letter-spacing: 10px;
-      font-weight: 700;
-    }
-
-    .text-box .tourex-2 {
-      font-size: 0.6rem;
-      letter-spacing: 2.5px;
-    }
-  }
-
-  .section_about__header {
-    font-size: 10px;
-    letter-spacing: 0;
+    margin-bottom: 0.5rem;
   }
 }

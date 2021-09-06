@@ -47,20 +47,3 @@
     }
   }
 }
-
-@media screen and (max-width: 767px) {
-  .feature {
-    padding: 3rem 1rem 3rem 1rem;
-    margin-top: -4rem;
-
-    &__row {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .feature {
-    padding: 5rem 2rem 7rem 2rem;
-  }
-}

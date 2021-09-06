@@ -27,22 +27,5 @@
   grid-template-columns: repeat(2, 1fr);
   width: 80%;
   margin: auto;
-}
-
-@media screen and (max-width: 767px) {
-  .section_about {
-    .section_about__header {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-
-    .first-grid {
-      grid-template-columns: 1fr;
-      padding-bottom: 8rem;
-
-      .tertiary-heading {
-        font-size: 1rem;
-      }
-    }
-  }
+  grid-gap: 1rem;
 }

@@ -30,26 +30,11 @@
       transform: scale(1.1) translateY(-0.6rem);
       outline: 0.5rem solid rgba(9, 160, 9, 0.795);
       z-index: 5;
-      box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.774);
+      box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.774);
     }
   }
 
   &:hover &__img:not(:hover) {
     transform: scale(0.9);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .composition {
-    &__img {
-      &-p2 {
-        top: -0.7rem;
-      }
-
-      &-p3 {
-        top: 2rem;
-        left: 2rem;
-      }
-    }
   }
 }
