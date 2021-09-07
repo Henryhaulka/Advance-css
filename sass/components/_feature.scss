@@ -12,11 +12,23 @@
   margin-top: -5rem;
   z-index: 3;
 
+  @include respond(big-desk) {
+    margin-top: -15rem;
+  }
+
   &__row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     transform: skewY(7deg);
+
+    @include respond(big-desk) {
+      padding: 10rem 5rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
 
     &__1 {
       background-color: rgba($white, 0.7);
@@ -27,17 +39,36 @@
       transition: all 0.2s;
       z-index: 1;
 
+      @include respond(phone) {
+        width: 70%;
+        margin: auto;
+      }
+
       i {
         font-size: 3rem;
         background: linear-gradient(to right, rgba(37, 231, 157, 0.795), rgba(10, 102, 10, 0.863));
         -webkit-background-clip: text;
         color: transparent;
         margin-bottom: 2rem;
+
+        @include respond(big-desk) {
+          font-size: 6rem;
+        }
       }
 
       h3 {
         text-transform: uppercase;
         font-size: 1rem;
+
+        @include respond(big-desk) {
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        @include respond(big-desk) {
+          font-size: 3rem;
+        }
       }
 
       &:hover {
@@ -45,22 +76,5 @@
         z-index: 5;
       }
     }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .feature {
-    padding: 3rem 1rem 3rem 1rem;
-    margin-top: -4rem;
-
-    &__row {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .feature {
-    padding: 5rem 2rem 7rem 2rem;
   }
 }

@@ -7,6 +7,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &-contain {
@@ -16,6 +20,11 @@
   &-logo {
     width: 7rem;
     margin-bottom: 3rem;
+
+    @include respond(big-desk) {
+      width: 15rem;
+      margin-bottom: 5rem;
+    }
   }
 
   &-item {
@@ -23,6 +32,10 @@
 
     &:not(:last-child) {
       margin-right: 0.7rem;
+
+      @include respond(big-desk) {
+        margin-right: 3rem;
+      }
     }
   }
 
@@ -32,6 +45,14 @@
     font-size: 0.8rem;
     display: inline-block;
     transition: all 0.3s;
+
+    @include respond(big-desk) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1rem;
+    }
 
     &:visited,
     &:link {
@@ -51,11 +72,22 @@
     border-top: 2px solid white;
     padding-top: 1rem;
     display: inline-block;
+
+    @include respond(phone) {
+      display: block;
+      text-align: center;
+      border-top: none;
+      margin-bottom: 1rem;
+    }
   }
 
   &-copyright {
     border-top: 2px solid white;
     padding-top: 1rem;
     display: inline-block;
+
+    @include respond(big-desk) {
+      font-size: 2rem;
+    }
   }
 }
