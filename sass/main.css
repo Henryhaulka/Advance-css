@@ -58,7 +58,13 @@ body {
   color: #777;
   font-weight: 400;
   line-height: 1.7;
-  padding: 1rem;
+  padding: 10px;
+}
+
+@media (max-width: 37.5em) {
+  body {
+    padding: 0;
+  }
 }
 
 .btn-animated {
@@ -101,8 +107,8 @@ body {
             transform: translateX(-50rem);
   }
   75% {
-    -webkit-transform: translateX(20rem);
-            transform: translateX(20rem);
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
     opacity: 0.5;
     color: orangered;
   }
@@ -120,8 +126,8 @@ body {
             transform: translateX(-50rem);
   }
   75% {
-    -webkit-transform: translateX(20rem);
-            transform: translateX(20rem);
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
     opacity: 0.5;
     color: orangered;
   }
@@ -220,6 +226,18 @@ body {
   letter-spacing: 0.2rem;
 }
 
+@media (min-width: 112.5rem) {
+  .tertiary-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 112.5rem) {
+  .paragraph-1 {
+    font-size: 2rem;
+  }
+}
+
 .paragraph-1:not(:last-child) {
   margin-bottom: 2.5rem;
 }
@@ -272,9 +290,15 @@ body {
   border-radius: 10%;
 }
 
+@media (min-width: 112.5rem) {
+  .header .logo {
+    height: 13rem;
+  }
+}
+
 .header .text-box {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   color: white;
   text-transform: uppercase;
@@ -313,6 +337,20 @@ body {
   }
 }
 
+@media (max-width: 37.5em) {
+  .header .text-box .tourex-1 {
+    -webkit-animation: none;
+            animation: none;
+    letter-spacing: 2rem;
+  }
+}
+
+@media (min-width: 112.5rem) {
+  .header .text-box .tourex-1 {
+    font-size: 15rem;
+  }
+}
+
 .header .text-box .tourex-2 {
   display: block;
   font-size: 1.5rem;
@@ -320,6 +358,19 @@ body {
   -webkit-animation: moveright 1.5s ease-in-out infinite;
           animation: moveright 1.5s ease-in-out infinite;
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 112.5rem) {
+  .header .text-box .tourex-2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .header .text-box .tourex-2 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+  }
 }
 
 .btn,
@@ -341,9 +392,21 @@ body {
   color: #777;
 }
 
+@media (min-width: 112.5rem) {
+  .btn-white {
+    font-size: 3rem;
+  }
+}
+
 .btn-green {
   background-color: green;
   color: white;
+}
+
+@media (min-width: 112.5rem) {
+  .btn-green {
+    font-size: 3rem;
+  }
 }
 
 .btn:hover {
@@ -374,6 +437,13 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+@media (min-width: 112.5rem) {
+  .btn-text {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+  }
+}
+
 .btn-white::after {
   background-color: white;
   color: #777;
@@ -395,6 +465,18 @@ body {
   margin-top: -20vh;
 }
 
+@media (min-width: 112.5rem) {
+  .section_about {
+    padding: 15rem 0 25rem 0;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section_about {
+    padding: 10rem 0 30rem 0;
+  }
+}
+
 .section_about__header,
 .section_tour__header {
   text-transform: uppercase;
@@ -405,9 +487,30 @@ body {
   color: transparent;
   display: inline-block;
   letter-spacing: 3px;
-  font-size: 30px;
+  font-size: 2rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+@media (min-width: 112.5rem) {
+  .section_about__header,
+  .section_tour__header {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .section_about__header,
+  .section_tour__header {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section_about__header,
+  .section_tour__header {
+    font-size: 1.5rem;
+  }
 }
 
 .section_about__header:hover,
@@ -427,6 +530,19 @@ body {
   grid-gap: 1rem;
 }
 
+@media (min-width: 112.5rem) {
+  .first-grid {
+    grid-gap: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .first-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .feature {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
   background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
@@ -438,6 +554,12 @@ body {
   z-index: 3;
 }
 
+@media (min-width: 112.5rem) {
+  .feature {
+    margin-top: -15rem;
+  }
+}
+
 .feature__row {
   display: -ms-grid;
   display: grid;
@@ -446,6 +568,19 @@ body {
   grid-gap: 2rem;
   -webkit-transform: skewY(7deg);
           transform: skewY(7deg);
+}
+
+@media (min-width: 112.5rem) {
+  .feature__row {
+    padding: 10rem 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .feature__row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .feature__row__1 {
@@ -460,6 +595,13 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 37.5em) {
+  .feature__row__1 {
+    width: 70%;
+    margin: auto;
+  }
+}
+
 .feature__row__1 i {
   font-size: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(rgba(37, 231, 157, 0.795)), to(rgba(10, 102, 10, 0.863)));
@@ -469,9 +611,27 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 112.5rem) {
+  .feature__row__1 i {
+    font-size: 6rem;
+  }
+}
+
 .feature__row__1 h3 {
   text-transform: uppercase;
   font-size: 1rem;
+}
+
+@media (min-width: 112.5rem) {
+  .feature__row__1 h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 112.5rem) {
+  .feature__row__1 p {
+    font-size: 3rem;
+  }
 }
 
 .feature__row__1:hover {
@@ -533,12 +693,35 @@ body {
   text-align: center;
 }
 
+@media (min-width: 112.5rem) {
+  .section_tour {
+    padding: 30rem 10rem 15rem 10rem;
+    margin-top: -15rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .section_tour {
+    padding: 10rem 3rem;
+  }
+}
+
 .section_tour_row {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
+}
+
+@media (max-width: 56.25em) {
+  .section_tour_row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    grid-gap: 5rem;
+  }
 }
 
 .card {
@@ -549,8 +732,14 @@ body {
   height: 32rem;
 }
 
+@media (min-width: 112.5rem) {
+  .card {
+    height: 70rem;
+    font-size: 3rem;
+  }
+}
+
 .card_side {
-  height: 32rem;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   position: absolute;
@@ -564,6 +753,13 @@ body {
   overflow: hidden;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.596);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.596);
+  height: 32rem;
+}
+
+@media (min-width: 112.5rem) {
+  .card_side {
+    height: 70rem;
+  }
 }
 
 .card_side__front {
@@ -605,6 +801,13 @@ body {
   height: 13rem;
 }
 
+@media (min-width: 112.5rem) {
+  .card .card_picture {
+    height: 30rem;
+    font-size: 3rem;
+  }
+}
+
 .card .card_picture_1, .card .card_picture_2, .card .card_picture_3 {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
@@ -638,6 +841,12 @@ body {
   width: 75%;
 }
 
+@media (min-width: 112.5rem) {
+  .card_heading {
+    font-size: 3rem;
+  }
+}
+
 .card_heading_span {
   padding: 1rem 0.5rem;
   -webkit-box-decoration-break: clone;
@@ -665,7 +874,6 @@ body {
 }
 
 .card_details ul {
-  padding-top: 1.5rem;
   color: #777;
   list-style: none;
 }
@@ -676,6 +884,12 @@ body {
 
 .card_details ul li:not(:last-child) {
   border-bottom: 1px solid rgba(119, 119, 119, 0.6);
+}
+
+@media (min-width: 112.5rem) {
+  .card_details ul li:not(:last-child) {
+    border-bottom: none;
+  }
 }
 
 .card_cta {
@@ -690,6 +904,66 @@ body {
 .card_price_box_tag {
   font-size: 5rem;
   font-weight: 100;
+}
+
+@media (max-width: 56.25em) {
+  .card {
+    height: auto;
+    margin: auto;
+    width: 50%;
+  }
+}
+
+@media (max-width: 56.25em) and (max-width: 37.5em) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .card_side {
+    height: auto;
+    position: relative;
+    border-radius: 0;
+    padding-bottom: 12rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .card_side__front {
+    background-color: white;
+  }
+  .card_side__back {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    padding: 4rem;
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -12rem;
+    border-radius: 0 0 5px 5px;
+  }
+  .card:hover .card_side__front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .card:hover .card_side__back {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .card_cta {
+    position: relative;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    text-transform: uppercase;
+    width: 100%;
+    padding: 4rem;
+  }
+  .card_price_box_tag {
+    font-size: 7rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+  }
 }
 
 .section-stories {
@@ -710,14 +984,32 @@ body {
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
 }
 
+@media (min-width: 112.5rem) {
+  .story {
+    padding: 10rem 12rem 20rem 12rem;
+  }
+}
+
 .story > * {
   -webkit-transform: skewX(12deg);
           transform: skewX(12deg);
 }
 
+@media (min-width: 112.5rem) {
+  .story p {
+    font-size: 2rem;
+  }
+}
+
 .story h3 {
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+@media (min-width: 112.5rem) {
+  .story h3 {
+    font-size: 3rem;
+  }
 }
 
 .story-shape {
@@ -731,6 +1023,15 @@ body {
   -webkit-transform: translateX(-1rem) skewX(12deg);
           transform: translateX(-1rem) skewX(12deg);
   position: relative;
+}
+
+@media (min-width: 112.5rem) {
+  .story-shape {
+    width: 20rem;
+    height: 20rem;
+    -webkit-transform: translateX(-3rem) skewX(12deg);
+            transform: translateX(-3rem) skewX(12deg);
+  }
 }
 
 .story-img {
@@ -783,23 +1084,54 @@ body {
 }
 
 .section-booking {
-  padding: 10rem;
+  padding: 8rem;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(14, 158, 14, 0.918)), to(rgba(87, 206, 87, 0.918)));
   background: linear-gradient(to right bottom, rgba(14, 158, 14, 0.918), rgba(87, 206, 87, 0.918));
+}
+
+@media (min-width: 112.5rem) {
+  .section-booking {
+    padding: 12rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section-booking {
+    padding: 4rem;
+  }
 }
 
 .section-booking-form {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("http://blog.bookingsnigeria.com/wp-content/uploads/2016/05/obudu-2-1170x550.jpg");
   background-size: cover;
-  height: 30rem;
+  height: 35rem;
   -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
           box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
 }
 
+@media (min-width: 112.5rem) {
+  .section-booking-form {
+    height: 55rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section-booking-form {
+    height: 40rem;
+  }
+}
+
 .section-booking-content {
   width: 50%;
   padding: 2.2rem;
+  height: 32rem;
+}
+
+@media (max-width: 37.5em) {
+  .section-booking-content {
+    padding: 1rem;
+  }
 }
 
 .form {
@@ -822,6 +1154,13 @@ body {
   font-size: 1rem;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+}
+
+@media (min-width: 112.5rem) {
+  .form-input {
+    font-size: 3rem;
+    padding-top: 2rem;
+  }
 }
 
 .form-input::-webkit-input-placeholder {
@@ -847,6 +1186,12 @@ body {
   transition: all 0.3s;
 }
 
+@media (min-width: 112.5rem) {
+  .form-label {
+    font-size: 2rem;
+  }
+}
+
 .form-input:placeholder-shown + .form-label {
   overflow: hidden;
   opacity: 0;
@@ -859,10 +1204,25 @@ body {
   width: 49%;
 }
 
+@media (max-width: 37.5em) {
+  .form-radio {
+    display: block;
+    width: 100;
+    margin-top: 1rem;
+  }
+}
+
 .form-label-radio {
   cursor: pointer;
   position: relative;
   padding-left: 2.5rem;
+}
+
+@media (min-width: 112.5rem) {
+  .form-label-radio {
+    font-size: 2rem;
+    padding-left: 4rem;
+  }
 }
 
 .form-radio-span {
@@ -874,6 +1234,20 @@ body {
   position: absolute;
   left: 0;
   top: -0.24rem;
+}
+
+@media (min-width: 112.5rem) {
+  .form-radio-span {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .form-radio-span {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .form-radio-span::after {
@@ -892,6 +1266,20 @@ body {
   transition: opacity 0.3s;
 }
 
+@media (min-width: 112.5rem) {
+  .form-radio-span::after {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .form-radio-span::after {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
 .form-input-radio:checked + .form-label-radio .form-radio-span::after {
   opacity: 1;
 }
@@ -903,6 +1291,20 @@ body {
 .form-bn {
   font-size: 1rem;
   font-weight: 700;
+}
+
+@media (min-width: 112.5rem) {
+  .form-bn {
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .form-bn {
+    font-size: 0.7rem;
+  }
 }
 
 .form-btn {
@@ -923,6 +1325,13 @@ body {
   margin: auto;
 }
 
+@media (max-width: 37.5em) {
+  .footer-row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .footer-contain {
   text-align: center;
 }
@@ -930,6 +1339,13 @@ body {
 .footer-logo {
   width: 7rem;
   margin-bottom: 3rem;
+}
+
+@media (min-width: 112.5rem) {
+  .footer-logo {
+    width: 15rem;
+    margin-bottom: 5rem;
+  }
 }
 
 .footer-item {
@@ -940,6 +1356,12 @@ body {
   margin-right: 0.7rem;
 }
 
+@media (min-width: 112.5rem) {
+  .footer-item:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+
 .footer-link {
   text-decoration: none;
   text-transform: uppercase;
@@ -947,6 +1369,18 @@ body {
   display: inline-block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media (min-width: 112.5rem) {
+  .footer-link {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .footer-link {
+    font-size: 1rem;
+  }
 }
 
 .footer-link:visited, .footer-link:link {
@@ -968,10 +1402,25 @@ body {
   display: inline-block;
 }
 
+@media (max-width: 37.5em) {
+  .footer-nav {
+    display: block;
+    text-align: center;
+    border-top: none;
+    margin-bottom: 1rem;
+  }
+}
+
 .footer-copyright {
   border-top: 2px solid white;
   padding-top: 1rem;
   display: inline-block;
+}
+
+@media (min-width: 112.5rem) {
+  .footer-copyright {
+    font-size: 2rem;
+  }
 }
 
 .nav {
@@ -1050,6 +1499,12 @@ body {
   transition: all 0.3s;
 }
 
+@media (min-width: 112.5rem) {
+  .nav-link:visited, .nav-link:link {
+    font-size: 5rem;
+  }
+}
+
 .nav-link:visited span, .nav-link:link span {
   margin-right: 0.8rem;
 }
@@ -1060,8 +1515,8 @@ body {
 }
 
 .nav-input:checked ~ .nav-background {
-  -webkit-transform: scale(89);
-          transform: scale(89);
+  -webkit-transform: scale(890);
+          transform: scale(890);
 }
 
 .nav-input:checked ~ .nav-contain {
@@ -1127,7 +1582,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100%;
   z-index: 10;
@@ -1175,6 +1630,12 @@ body {
   transition: all 0.3s 0.2s;
 }
 
+@media (max-width: 37.5em) {
+  .pop-content {
+    display: block;
+  }
+}
+
 .pop:target .pop-content {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -1187,6 +1648,13 @@ body {
   display: table-cell;
 }
 
+@media (max-width: 37.5em) {
+  .pop-left {
+    display: block;
+    width: 100%;
+  }
+}
+
 .pop-right {
   width: 66.66666%;
   display: table-cell;
@@ -1194,9 +1662,23 @@ body {
   padding: 2rem 3rem;
 }
 
+@media (max-width: 37.5em) {
+  .pop-right {
+    display: block;
+    width: 100%;
+  }
+}
+
 .pop-pic {
   width: 100%;
   display: block;
+  height: 14rem;
+}
+
+@media (max-width: 37.5em) {
+  .pop-pic:last-child {
+    display: none;
+  }
 }
 
 .pop-text {
@@ -1211,6 +1693,14 @@ body {
       -ms-hyphens: auto;
           hyphens: auto;
   -moz-hyphens: auto;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 37.5em) {
+  .pop-text {
+    margin-bottom: 1rem;
+  }
 }
 
 .pop-info {
@@ -1219,9 +1709,21 @@ body {
   font-size: 1rem;
 }
 
+@media (max-width: 37.5em) {
+  .pop-info {
+    margin: 1rem 0;
+  }
+}
+
 .pop-button {
   font-size: 2rem;
   font-weight: 300;
   font-family: inherit;
+}
+
+@media (max-width: 37.5em) {
+  .pop-button {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
