@@ -1,5 +1,5 @@
 # Natours
-Natours is a Tourism website where tourist/visitors can book a tourism ticket, check on various tourism package, read testimonials from our customers and have a feel of what we do at Natours
+Natours is a fully-responsive Tourism website where tourist/visitors can book a tourism ticket, check on various tourism package, read testimonials from our customers and have a feel of what we do at Natours
 
 ![screenshot]()
 ![screenshot]()
