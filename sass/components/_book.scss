@@ -1,7 +1,12 @@
 .section-booking {
-  padding: 10rem;
+  padding: 8rem;
   background: linear-gradient(to right bottom, rgba(14, 158, 14, 0.918), rgba(87, 206, 87, 0.918));
-
+    @include respond(big-desk) {
+      padding: 12rem;
+    }
+  @include respond(phone) {
+      padding: 4rem;
+    }
   &-form {
     background-image:
       linear-gradient(
@@ -12,13 +17,25 @@
       ),
       url("http://blog.bookingsnigeria.com/wp-content/uploads/2016/05/obudu-2-1170x550.jpg");
     background-size: cover;
-    height: 30rem;
+    height: 35rem;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
     border-radius: 5px;
+
+     @include respond(big-desk) {
+      height: 55rem;
+    }
+    
+     @include respond(phone) {
+      height: 40rem;
+    }
   }
 
   &-content {
     width: 50%;
     padding: 2.2rem;
+    height: 32rem;
+     @include respond(phone) {
+      padding: 1rem;
+    }
   }
 }

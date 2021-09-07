@@ -67,6 +67,9 @@
       background: linear-gradient(120deg, transparent 0%, transparent 50%, $white 50%);
       background-size: 220%;
       transition: all 0.3s;
+      @include respond(big-desk) {
+     font-size: 5rem;
+   }
 
       span {
         margin-right: 0.8rem;
@@ -81,7 +84,7 @@
   }
 
   &-input:checked ~ &-background {
-    transform: scale(89);
+    transform: scale(890);
   }
 
   &-input:checked ~ &-contain {

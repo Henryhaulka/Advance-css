@@ -25,11 +25,14 @@
   .logo {
     height: 5rem;
     border-radius: 10%;
+    @include respond(big-desk) {
+     height: 13rem;
+   }
   }
 
   .text-box {
     position: absolute;
-    top: 40%;
+    top: 45%;
     @include respond(phone) {
     top: 50%;
   }
@@ -55,6 +58,13 @@
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 2;
+     @include respond(phone) {
+    animation: none;
+    letter-spacing: 2rem;
+  }
+   @include respond(big-desk) {
+     font-size: 15rem;
+   }
   }
 
   .text-box .tourex-2 {
@@ -63,5 +73,12 @@
     letter-spacing: 0.7rem;
     animation: moveright 1.5s ease-in-out infinite;
     margin-bottom: 0.5rem;
+    @include respond(big-desk) {
+     font-size: 3rem;
+   }
+     @include respond(phone) {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+  }
   }
 }

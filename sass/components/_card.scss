@@ -3,9 +3,12 @@
   -moz-perspective: 100rem;
   position: relative;
   height: 32rem;
+   @include respond(big-desk) {
+     height: 70rem;
+     font-size: 3rem;
+   }
 
   &_side {
-    height: 32rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -16,6 +19,11 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.596);
+    height: 32rem;
+
+    @include respond(big-desk) {
+     height: 70rem;
+   }
 
     &__front {
       background-color: $white;
@@ -49,6 +57,11 @@
   .card_picture {
     background-size: cover;
     height: 13rem;
+       @include respond(big-desk) {
+     height: 30rem;
+     font-size: 3rem;
+   }
+    
 
     &_1,
     &_2,
@@ -81,6 +94,9 @@
     top: 5rem;
     text-transform: uppercase;
     width: 75%;
+     @include respond(big-desk) {
+     font-size: 3rem;
+   }
 
     &_span {
       padding: 1rem 0.5rem;
@@ -103,18 +119,22 @@
   &_details {
     width: 70%;
     margin: auto;
-
+  
     ul {
-      padding-top: 1.5rem;
+      // padding-top: 1.5rem;
       color: $ash;
       list-style: none;
-
+     
       li {
         padding: 0.7rem;
       }
 
       li:not(:last-child) {
-        border-bottom: 1px solid  rgba($ash, 0.6);
+        border-bottom: 1px solid rgba($ash, 0.6);
+        @include respond(big-desk) {
+        border-bottom: none;
+        }
+        
       }
     }
   }
@@ -133,4 +153,65 @@
       font-weight: 100;
     }
   }
+}
+
+@include respond(tab-port) {
+  .card {
+  height: auto;
+  margin: auto;
+  width: 50%;
+  @include respond(phone){
+    width: 100%;
+  }
+
+
+  &_side {
+    height: auto;
+    position: relative;
+    border-radius: 0;
+     padding-bottom: 12rem;
+     box-shadow: none;
+     
+
+    &__front {
+      background-color: $white;
+    }
+
+    &__back {
+      transform: rotateY(0);
+      padding: 4rem;
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      margin-top: -12rem;
+      // box-shadow: 0 10px 10px rgba(0, 0, 0, 0.596);
+      border-radius: 0 0 5px 5px;
+      // overflow: hidden;
+    }
+  }
+
+  &:hover &_side__front {
+    transform: rotateY(0);
+  }
+
+  &:hover &_side__back {
+    transform: rotateY(0);
+  }
+
+  &_cta {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0);
+    text-transform: uppercase;
+    width: 100%;
+    padding: 4rem;
+  }
+
+  &_price_box {
+    &_tag {
+      font-size: 7rem;
+      font-weight: 100;
+      margin-bottom: 2rem;
+    }
+  }
+}
 }
