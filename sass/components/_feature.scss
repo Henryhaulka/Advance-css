@@ -11,21 +11,23 @@
   transform: skewY(-7deg);
   margin-top: -5rem;
   z-index: 3;
+
   @include respond(big-desk) {
-     margin-top: -15rem;
-   }
+    margin-top: -15rem;
+  }
 
   &__row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     transform: skewY(7deg);
+
     @include respond(big-desk) {
-     padding: 10rem 5rem;
-   }
+      padding: 10rem 5rem;
+    }
 
     @include respond(phone) {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
 
     &__1 {
@@ -36,10 +38,11 @@
       box-shadow: 7px 10px 10px rgba(27, 27, 26, 0.5);
       transition: all 0.2s;
       z-index: 1;
-       @include respond(phone) {
-       width: 70%;
-       margin: auto;
-       }
+
+      @include respond(phone) {
+        width: 70%;
+        margin: auto;
+      }
 
       i {
         font-size: 3rem;
@@ -47,24 +50,26 @@
         -webkit-background-clip: text;
         color: transparent;
         margin-bottom: 2rem;
+
         @include respond(big-desk) {
           font-size: 6rem;
-       }
+        }
       }
 
       h3 {
         text-transform: uppercase;
         font-size: 1rem;
-         @include respond(big-desk) {
+
+        @include respond(big-desk) {
           font-size: 3rem;
-       }
+        }
       }
 
       p {
-          @include respond(big-desk) {
-          font-size:3rem;
-       }
-       }
+        @include respond(big-desk) {
+          font-size: 3rem;
+        }
+      }
 
       &:hover {
         transform: scale(1.1) translateY(-3px);

@@ -16,9 +16,10 @@
     display: block;
     font-size: 1rem;
     transition: 0.3s all;
+
     @include respond(big-desk) {
-     font-size: 3rem;
-     padding-top: 2rem;
+      font-size: 3rem;
+      padding-top: 2rem;
     }
 
     &::-webkit-input-placeholder {
@@ -41,8 +42,9 @@
     font-size: 0.9rem;
     margin-left: 1rem;
     transition: all 0.3s;
+
     @include respond(big-desk) {
-     font-size: 2rem;
+      font-size: 2rem;
     }
   }
 
@@ -55,10 +57,11 @@
   &-radio {
     display: inline-block;
     width: 49%;
-     @include respond(phone) {
-     display: block;
-     width: 100;
-     margin-top: 1rem;
+
+    @include respond(phone) {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
     }
   }
 
@@ -66,12 +69,11 @@
     cursor: pointer;
     position: relative;
     padding-left: 2.5rem;
-    
-     @include respond(big-desk) {
+
+    @include respond(big-desk) {
       font-size: 2rem;
       padding-left: 4rem;
     }
-
   }
 
   &-radio-span {
@@ -106,16 +108,16 @@
       border-radius: inherit;
       opacity: 0;
       transition: opacity 0.3s;
-       @include respond(big-desk) {
-      width: 1.4rem;
-      height: 1.4rem;
-    }
 
-     @include respond(phone) {
-      width: 0.5rem;
-      height: 0.5rem;
-    }
+      @include respond(big-desk) {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
 
+      @include respond(phone) {
+        width: 0.5rem;
+        height: 0.5rem;
+      }
     }
   }
 
@@ -138,7 +140,7 @@
     }
 
     @include respond(phone) {
-     font-size: 0.7rem;
+      font-size: 0.7rem;
     }
   }
 

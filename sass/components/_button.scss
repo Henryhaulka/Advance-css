@@ -14,17 +14,19 @@
 .btn-white {
   background-color: $white;
   color: #777;
+
   @include respond(big-desk) {
-     font-size: 3rem;
-   }
+    font-size: 3rem;
+  }
 }
 
 .btn-green {
   background-color: green;
   color: $white;
-   @include respond(big-desk) {
-     font-size: 3rem;
-   }
+
+  @include respond(big-desk) {
+    font-size: 3rem;
+  }
 }
 
 .btn:hover {
@@ -52,9 +54,9 @@
 
 .btn-text {
   @include respond(big-desk) {
-     font-size: 3rem;
-     margin-top: 1.5rem;
-   }
+    font-size: 3rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .btn-white::after {
