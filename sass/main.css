@@ -705,7 +705,7 @@ body {
 
 .section_tour {
   background-color: #f0eeee;
-  padding: 10rem 5rem 5rem 5rem;
+  padding: 10rem 20rem;
   margin-top: -5rem;
   text-align: center;
 }
@@ -1590,11 +1590,13 @@ body {
   top: 0.7rem;
 }
 
-.nav-label:hover .nav-button::before {
+.nav-label:hover,
+.nav-button::before {
   top: -1rem;
 }
 
-.nav-label:hover .nav-button::after {
+.nav-label:hover,
+.nav-button::after {
   top: 1rem;
 }
 
