@@ -268,8 +268,8 @@ body {
 
 .header {
   /* vh-viewport height */
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
-  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://i1.wp.com/www.travelwaka.com/wp-content/uploads/2021/01/Agbokim.jpg?resize=696%2C522&ssl=1");
+  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://i1.wp.com/www.travelwaka.com/wp-content/uploads/2021/01/Agbokim.jpg?resize=696%2C522&ssl=1");
   background-size: cover;
   height: 95vh;
   background-position: top;
@@ -468,7 +468,7 @@ body {
 
 .section_about {
   background-color: #f0eeee;
-  padding: 10rem 0;
+  padding: 10rem 0 20rem 0;
   margin-top: -20vh;
 }
 
@@ -551,13 +551,13 @@ body {
 }
 
 .feature {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
-  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://africasveryown.com/wp-content/uploads/2021/06/pic10.png");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 26, 0.5)), to(rgba(37, 231, 157, 0.795))), url("https://i1.wp.com/blog.wakanow.com/wp-content/uploads/2017/10/waterfall-2752823_640.jpg?fit=640%2C427&ssl=1");
+  background-image: linear-gradient(to right, rgba(27, 27, 26, 0.5), rgba(37, 231, 157, 0.795)), url("https://i1.wp.com/blog.wakanow.com/wp-content/uploads/2017/10/waterfall-2752823_640.jpg?fit=640%2C427&ssl=1");
   background-size: cover;
   padding: 10rem 5rem 10rem 5rem;
   -webkit-transform: skewY(-7deg);
           transform: skewY(-7deg);
-  margin-top: -5rem;
+  margin-top: -10rem;
   z-index: 3;
 }
 
