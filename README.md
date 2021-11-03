@@ -13,7 +13,7 @@ Natours is a fully-responsive Tourism website where tourist/visitors can book a 
 
 ## Live Demo 🔴
 
-[Live Demo Link](https://onuhenry.netlify.app/)
+[Live Demo Link](https://sharp-tesla-209e2e.netlify.app/)
 
 
 ## Getting Started 🏁
@@ -55,3 +55,6 @@ You can also fork this repo and work on it.
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+-  Jonas Schmedtmann @Udemy
